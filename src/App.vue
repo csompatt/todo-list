@@ -60,7 +60,7 @@ export default {
       tasksToDo: [],
       finishedTasks: [],
       listDisplay: true,
-      listSelectorBtnClass: 'selected-list'
+      listSelectorBtnClass: 'selected-list-btn'
     }
   },
   watch: {

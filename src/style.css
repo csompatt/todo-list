@@ -77,11 +77,11 @@ li {
 
 input::placeholder,
 li,
-.selected-list {
+.selected-list-btn {
   color: #000;
 }
 
-.selected-list {
+.selected-list-btn {
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: inset 0px 0px 10px #4ba0b5, 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
