@@ -1,74 +1,168 @@
-/* CSS RESET */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Martel:wght@200;300;400&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap');
+@import url('./reset.css');
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body {
+  height: 100%;
+  width: 100%;
+  padding-top: 2.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/background-img.jpg') no-repeat center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
 }
-*:focus,
-input {
-  outline: none;
+
+/* LAYOUT */
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  width: 100%;
 }
-html {
-  font: 100%;
+
+/* GLASSMORPHISM BACKGROUND */
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
 }
+
+/* GENERAL PROPERTIES */
+
+.w-80 {
+  width: 80%;
+}
+
+.d-inlineBlock {
+  display: inline-block;
+}
+
+.half-marginTop {
+  margin-top: 0.5rem;
+}
+
+.half-marginLeft {
+  margin-left: 0.5rem;
+}
+
+#app,
+.list-section {
+  height: 100%;
+}
+
+/* Flex display with vertical centering */
+.d-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+  font: 400 2rem 'Roboto Slab', serif;
+}
+
+#listChangerBtn {
+  font: 700 1.2rem 'Cormorant Garamond', serif;
+}
+
+li {
+  font-family: 'Martel', serif;
+  line-break: auto;
+  word-break: break-all;
+}
+
+/* COLORS */
+
+input::placeholder,
+li,
+.selected-list {
+  color: #000;
+}
+
+.selected-list {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0px 0px 10px #4ba0b5, 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-green {
+  background-color: #4caf50;
+}
+
+.btn-green:active {
+  background-color: rebeccapurple !important;
+}
+
+.btn-red {
+  background-color: #f44336;
+}
+
+.btn-blue {
+  background-color: #008cba;
+}
+
 h1,
 h2 {
-  margin-bottom: 0;
+  text-shadow: 0 0 10px #000;
 }
-ul {
-  list-style: none;
-  padding: 0;
-}
-button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
-}
-button::-moz-focus-inner {
-  border: 0;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-button,
+
+/* ==== INPUT ==== */
+
 input {
-  /* 1 */
-  overflow: visible;
-}
-input[type='text'] {
-  border-radius: 0;
-  border: 0;
-  background-color: whitesmoke;
-}
-body {
-  width: 100%;
-  margin: 0 auto;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  padding: 0.5rem;
+  margin: 1rem auto;
 }
 
-/*END RESETS*/
-
-body {
-  background: url(./assets/background-img.jpg) no-repeat center;
-  background-size: cover;
+input::placeholder {
+  opacity: 0.2;
 }
 
+/* ==== LISTS ==== */
 
+.list-section {
+  overflow: auto;
+}
+
+ul {
+  padding: 1rem 0;
+}
+
+li {
+  justify-content: space-between;
+  margin: 1rem auto;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+}
+
+/* ==== BUTTONS ==== */
+
+#listChangerBtn {
+  justify-content: space-around;
+  margin: 0 auto 0.5rem auto;
+  height: 2rem;
+}
+
+.selected-list-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.btn-pos {
+  min-width: 3.5rem;
+}
+
+.btn {
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
+
+.btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
