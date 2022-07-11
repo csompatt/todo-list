@@ -1,24 +1,12 @@
 # todo-list
 
-## Project setup
-```
-npm install
-```
+My first Vue.js CLI project.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+https://csompatt.github.io/todo-list/
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#Functions
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Add your name which saved into the local storage. After page reload the application load your name.
+- Add a new tasks.
+- Move finished tasks to the finished tasks list.
+- Delete tasks.
